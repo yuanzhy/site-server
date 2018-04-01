@@ -1,0 +1,7 @@
+spring:
+  application:
+    name: component-gateway
+  profiles:
+    active: dev
+server:
+  port: 9999
