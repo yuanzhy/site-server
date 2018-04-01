@@ -1,0 +1,14 @@
+#spring:
+#  datasource:
+#      name: userDB
+#      type: org.springframework.jdbc.datasource.DriverManagerDataSource
+#      url: jdbc:mysql://localhost:3306/db_site
+#      username: root
+#      password: root
+#      driver-class-name: com.mysql.jdbc.Driver
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:1111/eureka
+  instance:
+    prefer-ip-address: true
