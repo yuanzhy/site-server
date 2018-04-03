@@ -3,7 +3,7 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
-	<groupId>com.thunisoft.site</groupId>
+	<groupId>com.my.site</groupId>
 	<artifactId>service-user</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>jar</packaging>
@@ -12,10 +12,10 @@
 	<description>用户服务</description>
 
 	<parent>
-		<groupId>com.yuanzhy.site</groupId>
+		<groupId>com.my.site</groupId>
 		<artifactId>site</artifactId>
 		<version>0.0.1-SNAPSHOT</version>
-		<relativePath/> <!-- lookup parent from repository -->
+		<relativePath>../pom.xml</relativePath> <!-- lookup parent from repository -->
 	</parent>
 
 	<dependencies>
@@ -31,11 +31,11 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-webflux</artifactId>
 		</dependency>-->
-		<!--<dependency>
+		<dependency>
 			<groupId>com.alibaba</groupId>
 			<artifactId>druid</artifactId>
 			<version>1.0.27</version>
-		</dependency>-->
+		</dependency>
 		<dependency>
 			<groupId>mysql</groupId>
 			<artifactId>mysql-connector-java</artifactId>

@@ -3,7 +3,7 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
-	<groupId>com.yuanzhy.site</groupId>
+	<groupId>com.my.site</groupId>
 	<artifactId>site</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>pom</packaging>
@@ -29,6 +29,7 @@
 		<module>component-discovery</module>
 		<module>component-gateway</module>
 		<module>service-user</module>
+		<module>service-blog</module>
 	</modules>
 
 	<dependencies>
@@ -60,10 +61,10 @@
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-starter-ribbon</artifactId>
 		</dependency>
-		<!--<dependency>
+		<dependency>
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-starter-feign</artifactId>
-		</dependency>-->
+		</dependency>
 		<dependency>
 			<groupId>org.projectlombok</groupId>
 			<artifactId>lombok</artifactId>
