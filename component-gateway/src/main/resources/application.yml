@@ -5,3 +5,11 @@ spring:
     active: dev
 server:
   port: 9999
+zuul:
+  routes:
+    service-user:
+      path: /user/**
+      serviceId: service-user
+    service-blog:
+      path: /blog/**
+      serviceId: service-blog
