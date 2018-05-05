@@ -4,7 +4,7 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>com.my.site</groupId>
-	<artifactId>site</artifactId>
+	<artifactId>site-parent</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>pom</packaging>
 
@@ -25,11 +25,10 @@
 		<spring-boot.version>2.0.0.RELEASE</spring-boot.version>
 		<spring-cloud.version>Finchley.M9</spring-cloud.version>
 	</properties>
+
 	<modules>
-		<module>component-discovery</module>
-		<module>component-gateway</module>
-		<module>service-user</module>
-		<module>service-blog</module>
+		<module>component</module>
+		<module>service</module>
 	</modules>
 
 	<dependencies>
