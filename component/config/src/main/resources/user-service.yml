@@ -1,0 +1,4 @@
+user:
+  test: test-user-config
+server:
+  port: 6666

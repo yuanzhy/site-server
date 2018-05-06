@@ -1,0 +1,6 @@
+# blog-service服务配置了srping.cloud.config.profiles=dev的情况下找此配置文件
+# 如启动了本服务，并且都在同一个服务发现上，下列配置会覆盖掉blog-service内的同名配置
+blog:
+  test: test-config-dev
+server:
+  port: 7778

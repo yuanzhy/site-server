@@ -1,7 +1,29 @@
+# 其他应用通过服务发现找到配置中心，根据{applicationName}-{profiles}-{branch}.yml查找配置，
+# 其中profiles不配默认为空，branch不配，默认为master分支
 spring:
   application:
     name: config
   profiles:
-    active: dev
+    active: native # 默认加载git上的配置，配成native是加载本地，即resources目录下的配置
+#  cloud:
+#    config:
+#      server:
+#        git:
+#          uri: https://github.com/yuanzhy/site # 存放配置信息的git地址
+#          search-paths: config-repo,config-repo-test # 仓库路径下相对搜索位置
+#          username: yuanzhy
+#          password: xxxxxx
+# 在https://github.com/yuanzhy/site/config-repo 创建配置文件，blog.yml, blog-dev.yml, blog-prod.yml
+# 分支方式：对config-repo仓库创建一个test-branch分支
+# 支持多种访问方式：/{application}/{profiles}/[{branch}],  /{branch}/{application}-{profiles}.yml, /{application}-{profiles}.yml
+# 如：http://localhost:8888/{contextPath}/blog/dev/test-branch,   http://localhost:8888/{contextPath}/test-branch/blog-dev.yml, http://localhost:8888/{contextPath}/blog-dev.yml
 server:
-  port: 5555
+  port: 8888
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:1111/eureka
+  instance:
+    prefer-ip-address: true
+#config:
+#  test: config-server
