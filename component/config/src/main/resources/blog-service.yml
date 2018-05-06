@@ -1,5 +1,5 @@
 # blog-service服务在没有配置srping.cloud.config.profiles的情况下默认找此配置文件
-# 如启动了本服务，并且都在同一个服务发现上，下列配置会覆盖掉blog-service内的同名配置
+# 下列配置会覆盖掉blog-service服务内的同名配置
 blog:
   test: test-config
 server:

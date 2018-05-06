@@ -32,6 +32,10 @@ public class BlogApplication {
 		return new RestTemplate();
 	}
 
+	/**
+	 * /hystrix.stream 端点在springBoot2.0中默认没开放，需要把这个servlet配上
+	 * @return
+	 */
 	@Bean
 	public ServletRegistrationBean getServlet() {
 		HystrixMetricsStreamServlet streamServlet = new HystrixMetricsStreamServlet();

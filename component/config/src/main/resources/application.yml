@@ -1,5 +1,5 @@
 # 其他应用通过服务发现找到配置中心，根据{applicationName}-{profiles}-{branch}.yml查找配置，
-# 其中profiles不配默认为空，branch不配，默认为master分支
+# 其中profiles不配默认为default，branch不配，默认为master分支
 spring:
   application:
     name: config
@@ -16,9 +16,9 @@ spring:
 # 在https://github.com/yuanzhy/site/config-repo 创建配置文件，blog.yml, blog-dev.yml, blog-prod.yml
 # 分支方式：对config-repo仓库创建一个test-branch分支
 # 支持多种访问方式：/{application}/{profiles}/[{branch}],  /{branch}/{application}-{profiles}.yml, /{application}-{profiles}.yml
-# 如：http://localhost:8888/{contextPath}/blog/dev/test-branch,   http://localhost:8888/{contextPath}/test-branch/blog-dev.yml, http://localhost:8888/{contextPath}/blog-dev.yml
+# 如：http://config-server/{contextPath}/blog/dev/test-branch,   http://config-server/{contextPath}/test-branch/blog-dev.yml, http://config-server/{contextPath}/blog-dev.yml
 server:
-  port: 8888
+  port: 8889
 eureka:
   client:
     service-url:
