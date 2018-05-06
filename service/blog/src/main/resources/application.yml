@@ -6,8 +6,9 @@ spring:
     active: dev
 #  cloud:
 #    config:
+#      name: blog # 覆盖spring.application.name，来和配置中心交互，否则就找blog-service.yml
 #      profile: dev # 找"blog-service-dev.yml"配置
-#    name: blog # 覆盖spring.application.name，来和配置中心交互，否则就找blog-service.yml
+#      label: # 对应git的分支，不配默找master分支
 #      discovery:
 #        enabled: true # 配置中心启用服务发现方式 springCloud2.0在同一个服务发现里，不需要配这个了
 #        service-id: config # 配置中心的服务名 springCloud2.0在同一个服务发现里，不需要配这个了
