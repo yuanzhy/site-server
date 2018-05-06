@@ -4,31 +4,39 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>com.my.site</groupId>
-	<artifactId>component</artifactId>
+	<artifactId>config</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<packaging>pom</packaging>
+	<packaging>jar</packaging>
 
-	<name>site</name>
-	<description>yuanzhy site</description>
+	<name>config</name>
+	<description>配置服务</description>
 
 	<parent>
 		<groupId>com.my.site</groupId>
-		<artifactId>site-parent</artifactId>
+		<artifactId>component</artifactId>
 		<version>0.0.1-SNAPSHOT</version>
 		<relativePath>../pom.xml</relativePath> <!-- lookup parent from repository -->
 	</parent>
 
-	<modules>
-		<module>discovery</module>
-		<module>gateway</module>
-		<module>hystrix-dashboard</module>
-		<module>turbine</module>
-		<module>config</module>
-	</modules>
+	<dependencies>
+		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-config-server</artifactId>
+		</dependency>
+	</dependencies>
 
 	<dependencyManagement>
-
+		<dependencies>
+			<dependency>
+				<groupId>org.springframework.cloud</groupId>
+				<artifactId>spring-cloud-dependencies</artifactId>
+				<version>${spring-cloud.version}</version>
+				<type>pom</type>
+				<scope>import</scope>
+			</dependency>
+		</dependencies>
 	</dependencyManagement>
+
 	<build>
 		<plugins>
 			<plugin>
@@ -38,14 +46,4 @@
 		</plugins>
 	</build>
 
-	<repositories>
-		<repository>
-			<id>spring-milestones</id>
-			<name>Spring Milestones</name>
-			<url>https://repo.spring.io/libs-milestone</url>
-			<snapshots>
-				<enabled>false</enabled>
-			</snapshots>
-		</repository>
-	</repositories>
 </project>

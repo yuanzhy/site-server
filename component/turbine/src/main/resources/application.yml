@@ -1,0 +1,9 @@
+spring:
+  application:
+    name: turbine
+  profiles:
+    active: dev
+server:
+  port: 8333
+turbine:
+  appConfig: blog-service,user-service

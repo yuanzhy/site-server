@@ -1,7 +1,7 @@
 spring:
   application:
-    name: user-service
+    name: config
   profiles:
     active: dev
 server:
-  port: 9000
+  port: 5555

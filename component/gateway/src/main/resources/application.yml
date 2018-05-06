@@ -13,3 +13,9 @@ zuul:
     blog-service:
       path: /blog/**
       serviceId: blog-service
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          strategy: THREAD

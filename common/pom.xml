@@ -4,12 +4,12 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>com.my.site</groupId>
-	<artifactId>component</artifactId>
+	<artifactId>common</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>pom</packaging>
 
-	<name>site</name>
-	<description>yuanzhy site</description>
+	<name>common</name>
+	<description>common</description>
 
 	<parent>
 		<groupId>com.my.site</groupId>
@@ -17,15 +17,12 @@
 		<version>0.0.1-SNAPSHOT</version>
 		<relativePath>../pom.xml</relativePath> <!-- lookup parent from repository -->
 	</parent>
-
 	<modules>
-		<module>discovery</module>
-		<module>gateway</module>
-		<module>hystrix-dashboard</module>
-		<module>turbine</module>
-		<module>config</module>
 	</modules>
 
+	<dependencies>
+
+	</dependencies>
 	<dependencyManagement>
 
 	</dependencyManagement>
@@ -38,14 +35,4 @@
 		</plugins>
 	</build>
 
-	<repositories>
-		<repository>
-			<id>spring-milestones</id>
-			<name>Spring Milestones</name>
-			<url>https://repo.spring.io/libs-milestone</url>
-			<snapshots>
-				<enabled>false</enabled>
-			</snapshots>
-		</repository>
-	</repositories>
 </project>
