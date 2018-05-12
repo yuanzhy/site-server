@@ -25,5 +25,8 @@ eureka:
       defaultZone: http://localhost:1111/eureka
   instance:
     prefer-ip-address: true
-#config:
-#  test: config-server
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*" # 暴漏actuador所有端点，主要的还是bus-refresh吧，http://localhost:8888/actuator/bus-refresh 需要刷新配置的bean加上@RefreshScope

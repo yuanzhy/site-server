@@ -5,3 +5,15 @@ spring:
     active: dev
 server:
   port: 8222
+turbine:
+  app-config: BLOG-SERVICE
+  cluster-name-expression: new String("default") # 同名会自动组建为一个turbine集群，hystrix可通过cluster参数指定监控对应的turbine集群，一定要配此项并用new String方式，否则turbine.stream
+#  aggregator:
+#    cluster-config: "default" 不配置默认就是default
+management:
+  endpoints:
+    web:
+      exposure:
+        include: turbine.stream # 必须配置这个暴漏turbine端点，不然无法使用
+  server:
+    port: 8990

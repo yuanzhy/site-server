@@ -13,6 +13,7 @@ zuul:
     blog-service:
       path: /blog/**
       serviceId: blog-service
+# hystrix dashboard监控zuul时会一直处理Loading状态，由于zuul默认使用信号量隔离，配置以下为线程池后可解决
 hystrix:
   command:
     default:

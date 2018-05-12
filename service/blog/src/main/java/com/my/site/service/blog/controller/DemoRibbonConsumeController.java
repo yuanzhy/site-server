@@ -11,7 +11,7 @@ import org.springframework.web.client.RestTemplate;
 
 @RestController
 @RefreshScope
-public class DemoConsumeController {
+public class DemoRibbonConsumeController {
     @Autowired
     private RestTemplate restTemplate;
 

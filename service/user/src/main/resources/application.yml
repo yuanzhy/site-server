@@ -1,3 +1,5 @@
+# 单独：http://localhost:7777/actuator/hystrix.stream
+# turbine：http://localhost:8333/turbine.stream
 spring:
   application:
     name: user-service

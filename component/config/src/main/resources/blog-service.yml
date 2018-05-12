@@ -4,6 +4,3 @@ blog:
   test: test-config
 server:
   port: 7777
-spring:
-  application:
-    name: blog-service2

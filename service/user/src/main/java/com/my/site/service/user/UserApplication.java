@@ -14,17 +14,19 @@ import org.springframework.context.annotation.Bean;
 @EnableCircuitBreaker
 public class UserApplication {
 
-	public static void main(String[] args) {
-		SpringApplication.run(UserApplication.class, args);
-	}
+    public static void main(String[] args) {
+        SpringApplication.run(UserApplication.class, args);
+    }
 
-	@Bean
-	public ServletRegistrationBean getServlet() {
-		HystrixMetricsStreamServlet streamServlet = new HystrixMetricsStreamServlet();
-		ServletRegistrationBean registrationBean = new ServletRegistrationBean(streamServlet);
-		registrationBean.setLoadOnStartup(1);
-		registrationBean.addUrlMappings("/hystrix.stream");
-		registrationBean.setName("HystrixMetricsStreamServlet");
-		return registrationBean;
-	}
+
+    // 这是笨方法，2.0可通过配置management.endpoints.web.exposure.include=hystrix.stream开启
+//	@Bean
+//	public ServletRegistrationBean getServlet() {
+//		HystrixMetricsStreamServlet streamServlet = new HystrixMetricsStreamServlet();
+//		ServletRegistrationBean registrationBean = new ServletRegistrationBean(streamServlet);
+//		registrationBean.setLoadOnStartup(1);
+//		registrationBean.addUrlMappings("/hystrix.stream");
+//		registrationBean.setName("HystrixMetricsStreamServlet");
+//		return registrationBean;
+//	}
 }
