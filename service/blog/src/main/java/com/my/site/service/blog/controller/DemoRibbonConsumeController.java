@@ -52,7 +52,7 @@ public class DemoRibbonConsumeController {
     /**
      * config server的配置
      */
-    @Value("${blog.test}")
+//    @Value("${blog.test}")
     private String test;
     /**
      * config server的配置

@@ -1,0 +1,5 @@
+server:
+  port: 9411 # SpringBoot整合zipkin默认连接此端口
+spring:
+  application:
+    name: zipkin

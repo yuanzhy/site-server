@@ -1,0 +1,20 @@
+{"properties": [
+    {
+        "name": "artery.tpl.form.css",
+        "type": "java.lang.String",
+        "description": "新建表单css模板存放位置，相对于resources目录",
+        "defaultValue": "artery/tpl/form/css.tpl"
+    },
+    {
+        "name": "artery.tpl.form.js",
+        "type": "java.lang.String",
+        "description": "新建表单js模板存放位置，相对于resources目录",
+        "defaultValue": "artery/tpl/form/js.tpl"
+    },
+    {
+        "name": "artery.tpl.form.java",
+        "type": "java.lang.String",
+        "description": "新建表单java模板存放位置，相对于resources目录",
+        "defaultValue": "artery/tpl/form/java.tpl"
+    }
+]}

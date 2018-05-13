@@ -6,3 +6,14 @@ spring:
     username: root
     password: root
     driver-class-name: com.mysql.jdbc.Driver
+  zipkin:
+    base-url: http://localhost:9411/ # SpringBoot默认配置就是此地址
+  sleuth:
+    sampler:
+      probability: 1 # 开发期间收集100%的链路跟踪日志
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:1111/eureka
+  instance:
+    prefer-ip-address: true

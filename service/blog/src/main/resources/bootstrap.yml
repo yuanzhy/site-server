@@ -1,20 +1,20 @@
-# bootstrap.yml优先级高于application.yml, 引入配置中心，则以下配置必须优先级高于application.yml
-# 粗略优先级：bootstrap.yml > configServer > application.yml
-# 所以如果以下配置在application.yml中，存在config-client的情况会优先找configServer，这时候还没有加载服务发现的配置，
-# 即默认访问localhost:8888找配置服务了，配置中心微服务化也就不生效了
-spring:
-  cloud:
-    config:
-      discovery: # 通过服务发现方式寻找配置中心，不配置默认寻找localhost:8888做为配置中心
-        enabled: true # 配置中心启用服务发现方式
-        service-id: config # 配置中心的服务名
-#      profile: dev # 找"blog-service-dev.yml"配置, 不配置找默认的blog-service.yml
-#      label: # 对应git的分支，不配默找master分支
-#      name: blog # 覆盖spring.application.name，来和配置中心交互，否则就找blog-service.yml
-#      uri: http://localhost:8889/ # 如果以url方式访问配置中心，此配置可以配到application.yml中
-eureka:
-  client:
-    service-url:
-      defaultZone: http://localhost:1111/eureka
-  instance:
-    prefer-ip-address: true
+## bootstrap.yml优先级高于application.yml, 引入配置中心，则以下配置必须优先级高于application.yml
+## 粗略优先级：bootstrap.yml > configServer > application.yml
+## 所以如果以下配置在application.yml中，存在config-client的情况会优先找configServer，这时候还没有加载服务发现的配置，
+## 即默认访问localhost:8888找配置服务了，配置中心微服务化也就不生效了
+#spring:
+#  cloud:
+#    config:
+#      discovery: # 通过服务发现方式寻找配置中心，不配置默认寻找localhost:8888做为配置中心
+#        enabled: true # 配置中心启用服务发现方式
+#        service-id: config # 配置中心的服务名
+##      profile: dev # 找"blog-service-dev.yml"配置, 不配置找默认的blog-service.yml
+##      label: # 对应git的分支，不配默找master分支
+##      name: blog # 覆盖spring.application.name，来和配置中心交互，否则就找blog-service.yml
+##      uri: http://localhost:8889/ # 如果以url方式访问配置中心，此配置可以配到application.yml中
+#eureka:
+#  client:
+#    service-url:
+#      defaultZone: http://localhost:1111/eureka
+#  instance:
+#    prefer-ip-address: true

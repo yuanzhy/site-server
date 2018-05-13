@@ -1,4 +1,4 @@
-# blog-service服务配置了srping.cloud.config.profiles=dev的情况下找此配置文件
+# blog-service服务配置了srping.cloud.config.profile=dev的情况下找此配置文件
 # 下列配置会覆盖掉blog-service服务内的同名配置
 blog:
   test: test-config-dev
