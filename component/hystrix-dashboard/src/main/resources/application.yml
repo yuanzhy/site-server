@@ -15,5 +15,8 @@ management:
     web:
       exposure:
         include: turbine.stream # 必须配置这个暴漏turbine端点，不然无法使用
+  endpoint:
+    health:
+      show-details: always
   server:
     port: 8990
